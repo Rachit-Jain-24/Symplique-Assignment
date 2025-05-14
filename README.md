@@ -61,9 +61,11 @@ The **Remind-me-later** web application allows users to set reminders with a cus
 
    ```
    git clone https://github.com/your-username/remind-me-later.git
+   
 2. Navigate to the Project Folder:
-
+```
 cd remind-me-later
+```
 3. Create and Activate a Virtual Environment:
 
 python -m venv venv
