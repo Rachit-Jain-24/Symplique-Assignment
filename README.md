@@ -63,33 +63,36 @@ The **Remind-me-later** web application allows users to set reminders with a cus
    git clone https://github.com/your-username/remind-me-later.git
    
 2. Navigate to the Project Folder:
-```
-cd remind-me-later
-```
+  ```
+  cd remind-me-later
+  ```
 3. Create and Activate a Virtual Environment:
+ ```
+  python -m venv venv
+  source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+ ```
 
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 4. Install Dependencies:
 
-Install the required dependencies using pip.
-pip install -r requirements.txt
+Install the required dependencies using pip
 
 5. Apply Database Migrations:
 
 Run the following command to apply migrations and set up the database.
 
-python manage.py migrate
-
+```
+  python manage.py migrate
+```
 6. Run the Development Server:
 Start the Django development server.
-
-python manage.py runserver
-
+ ```
+  python manage.py runserver
+ ```
 7. Access the API:
 
-Visit http://127.0.0.1:8000/ to access the API.
-
+ ```
+  Visit http://127.0.0.1:8000/ to access the API.
+ ```
 API Endpoints
 1. Create a Reminder
 URL: /api/reminders/
@@ -99,6 +102,7 @@ Method: POST
 Description: Accepts reminder details and stores them in the database.
 
 Request Body:
+ ```
 json
 
 {
@@ -114,7 +118,8 @@ time: The time for the reminder.
 message: The reminder text message.
 
 reminder_method: The method of reminder (either "SMS" or "Email").
-
+ ```
+ ```
 Response:
 json
 
@@ -125,6 +130,7 @@ json
   "message": "Meeting reminder",
   "reminder_method": "SMS"
 }
+ ```
 Success Response:
 
 Code: 201 CREATED
